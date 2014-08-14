@@ -1,0 +1,26 @@
+{
+	"cmd": "make -C app/peripherals_stm32f4x7/",
+	"env": {},
+	"shell": true,
+	"working_dir": "${project_path}",
+	"file_regex": "^(?:CMake (?:Error|Warning) at |  )?([^:]+):([0-9]+).*$",
+	"syntax": "Packages/User/ros2_embedded/ros2_embedded.tmLanguage",
+	"variants": [
+		{
+			"cmd": "make -C app/peripherals_stm32f4x7/",
+			"name": "apps: peripherals",
+			"working_dir": "${project_path}",
+			"file_regex": "^(?:CMake (?:Error|Warning) at |  )?([^:]+):([0-9]+).*$",
+		},
+		{
+			"cmd": "make -C app/echo/",
+			"name": "apps: echo",
+			"working_dir": "${project_path}",
+			"file_regex": "^(?:CMake (?:Error|Warning) at |  )?([^:]+):([0-9]+).*$",
+		},
+		{
+			"cmd": "make -C app/chat/",
+			"name": "apps: chat"
+		}
+	]
+}
